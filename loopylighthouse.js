@@ -1,16 +1,11 @@
-var x = 100;
+for (let num = 100; num <= 200; num++) {
+  let output = "";
 
-while (x <= 200) {
-  if (x % 3 === 0 && x % 4 === 0) {
-    console.log("LoopyLighthouse");
-  }else if (x % 4 === 0) {
-    console.log("Lighthouse");
-  }else if (x % 3 === 0) {
-    console.log("Loopy");
+  if (num % 3 === 0) {
+    output += "Loopy";
   }
-  else {
-    console.log(x);
+  if (num % 4 === 0) {
+    output += "Lighthouse";
   }
-  x++; 
-  
+  console.log(output === "" ? num : output);
 }
